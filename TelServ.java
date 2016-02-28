@@ -115,7 +115,7 @@ public class TelServ
                 print.close();
                 sock.close();
 
-                System.out.println(str + " connected and we said hello");
+                System.out.println(str + " connected and got " + tot + "/" + totQ + " questions correct");
             }
         }
         catch(FileNotFoundException f)

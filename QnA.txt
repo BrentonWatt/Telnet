@@ -1,7 +1,7 @@
 ?The successor of IPv4 is:
-+TCP
-+Ethernet
-+IPv5
+-TCP
+-Ethernet
+-IPv5
 +IPv6
 ?DNS normally uses the following transport layer protocol
 -TCP
