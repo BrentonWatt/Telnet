@@ -30,8 +30,7 @@ public class TelServ
         char num;
         try
         {
-            FileReader fileReader = new FileReader(fName);
-            BufferedReader txt = new BufferedReader(fileReader);
+            
 
             ServerSocket serv = new ServerSocket(port);
             while (true)
@@ -39,6 +38,8 @@ public class TelServ
                 Socket sock = serv.accept();
                 OutputStream oStream = sock.getOutputStream();
                 PrintWriter print = new PrintWriter(oStream, true);
+		FileReader fileReader = new FileReader(fName);
+                BufferedReader txt = new BufferedReader(fileReader);
                 print.println("Hello, what's your name");
 
                 BufferedReader in = new BufferedReader(new InputStreamReader(sock.getInputStream()));
@@ -112,10 +113,12 @@ public class TelServ
                         print.println("Unfortunately there are no more questions, your score is " + tot + "/" + totQ);
                     }
                 }
-                print.close();
                 sock.close();
-
+		print.close();
+		quit = false;
                 System.out.println(str + " connected and got " + tot + "/" + totQ + " questions correct");
+		tot = 0;
+		totQ = 0;
             }
         }
         catch(FileNotFoundException f)
