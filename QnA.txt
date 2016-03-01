@@ -8,4 +8,18 @@
 +UDP
 -IEEE 802.3
 -All of the above
+?Which of these is the best laptop?
+-Macbook Pro
+-Macbook Air
+-Mac Mini
+?Which political party is crazy?
+-ANC
+-DA
++EFF
+-VW
+?Which institution is best?
++Tuks
+-Harvard
+-UCLA
+-Stanford
 *
